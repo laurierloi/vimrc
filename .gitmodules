@@ -1,0 +1,18 @@
+[submodule "my_plugins/YouCompleteMe"]
+	path = my_plugins/YouCompleteMe
+	url = https://github.com/ycm-core/YouCompleteMe.git
+[submodule "my_plugins/lightline-bufferline"]
+	path = my_plugins/lightline-bufferline
+	url = https://github.com/mengelbrecht/lightline-bufferline.git 
+[submodule "my_plugins/robotframework-vim"]
+	path = my_plugins/robotframework-vim
+	url = https://github.com/mfukar/robotframework-vim.git
+[submodule "my_plugins/unicode.vim"]
+	path = my_plugins/unicode.vim
+	url = https://github.com/chrisbra/unicode.vim.git
+[submodule "my_plugins/vim-easy-align"]
+	path = my_plugins/vim-easy-align
+	url = https://github.com/junegunn/vim-easy-align.git
+[submodule "my_plugins/vim-orgmode"]
+	path = my_plugins/vim-orgmode
+	url = https://github.com/jceb/vim-orgmode.git
