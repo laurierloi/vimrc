@@ -16,3 +16,6 @@
 [submodule "my_plugins/vim-orgmode"]
 	path = my_plugins/vim-orgmode
 	url = https://github.com/jceb/vim-orgmode.git
+[submodule "my_plugins/vim-speeddating"]
+	path = my_plugins/vim-speeddating
+	url = https://github.com/tpope/vim-speeddating.git
