@@ -63,6 +63,7 @@ let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee'
 """"""""""""""""""""""""""""""
 " => ZenCoding
 """"""""""""""""""""""""""""""
+" TODO: unused for now, see how it works
 " Enable all functions in all modes
 let g:user_zen_mode='a'
 
@@ -94,7 +95,7 @@ map <leader>nf :NERDTreeFind<cr>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => vim-multiple-cursors
+" => vim-visual-multi
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:multi_cursor_use_default_mapping=0
 
@@ -155,28 +156,6 @@ let g:lightline#bufferline#show_number=1
 let g:lightline#bufferline#clickable=1
 let g:lightline.component_raw = {'buffers': 1}
 
-nmap <Leader>1 <Plug>lightline#bufferline#go(1)
-nmap <Leader>2 <Plug>lightline#bufferline#go(2)
-nmap <Leader>3 <Plug>lightline#bufferline#go(3)
-nmap <Leader>4 <Plug>lightline#bufferline#go(4)
-nmap <Leader>5 <Plug>lightline#bufferline#go(5)
-nmap <Leader>6 <Plug>lightline#bufferline#go(6)
-nmap <Leader>7 <Plug>lightline#bufferline#go(7)
-nmap <Leader>8 <Plug>lightline#bufferline#go(8)
-nmap <Leader>9 <Plug>lightline#bufferline#go(9)
-nmap <Leader>0 <Plug>lightline#bufferline#go(10)
-
-nmap <Leader>c1 <Plug>lightline#bufferline#delete(1)
-nmap <Leader>c2 <Plug>lightline#bufferline#delete(2)
-nmap <Leader>c3 <Plug>lightline#bufferline#delete(3)
-nmap <Leader>c4 <Plug>lightline#bufferline#delete(4)
-nmap <Leader>c5 <Plug>lightline#bufferline#delete(5)
-nmap <Leader>c6 <Plug>lightline#bufferline#delete(6)
-nmap <Leader>c7 <Plug>lightline#bufferline#delete(7)
-nmap <Leader>c8 <Plug>lightline#bufferline#delete(8)
-nmap <Leader>c9 <Plug>lightline#bufferline#delete(9)
-nmap <Leader>c0 <Plug>lightline#bufferline#delete(10)
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vimroom
@@ -192,7 +171,7 @@ nnoremap <silent> <leader>z :Goyo<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:ale_linters = {
 \   'javascript': ['jshint'],
-\   'python': ['flake8'],
+\   'python': ['black'],
 \   'go': ['go', 'golint', 'errcheck']
 \}
 
@@ -203,11 +182,18 @@ let g:ale_set_highlights = 1
 
 " Only run linting when saving the file
 let g:ale_lint_on_text_changed = 'never'
-let g:ale_lint_on_enter = 0
-
+let g:ale_lint_on_enter = 1
+let g:ale_lint_on_insert_leave = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Git gutter (Git diff)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:gitgutter_enabled=0
+let g:gitgutter_enabled=1
 nnoremap <silent> <leader>d :GitGutterToggle<cr>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Easy Align
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nmap ga <Plug>(EasyAlign)
+xmap ga <Plug>(EasyAlign)
+
