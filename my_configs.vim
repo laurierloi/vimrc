@@ -10,3 +10,10 @@ set cursorcolumn
 " vsplit
 nmap <silent> <leader>sv :vsplit<cr>
 nmap <silent> <leader>sh :hsplit<cr>
+
+" Tab behavior for different file formats
+autocmd FileType robot    setlocal shiftwidth=4 softtabstop=4 noexpandtab
+autocmd FileType python   setlocal shiftwidth=4 softtabstop=4 expandtab
+autocmd FileType html     setlocal shiftwidth=2 softtabstop=2 expandtab
+autocmd FileType markdown setlocal shiftwidth=2 softtabstop=2 expandtab
+
