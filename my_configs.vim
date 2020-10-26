@@ -9,7 +9,7 @@ set cursorcolumn
 
 " vsplit
 nmap <silent> <leader>sv :vsplit<cr>
-nmap <silent> <leader>sh :hsplit<cr>
+nmap <silent> <leader>sh :split<cr>
 
 " Tab behavior for different file formats
 autocmd FileType robot    setlocal shiftwidth=4 softtabstop=4 noexpandtab
