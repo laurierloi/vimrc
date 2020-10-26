@@ -198,3 +198,10 @@ nnoremap <silent> <leader>d :GitGutterToggle<cr>
 nmap ga <Plug>(EasyAlign)
 xmap ga <Plug>(EasyAlign)
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Markdown
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:vim_markdown_folding_disabled = 0
+let g:vim_markdown_folding_level = 1
+let conceallevel=2
+
