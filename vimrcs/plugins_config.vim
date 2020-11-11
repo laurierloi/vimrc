@@ -202,6 +202,11 @@ xmap ga <Plug>(EasyAlign)
 " => Markdown
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:vim_markdown_folding_disabled = 0
-let g:vim_markdown_folding_level = 1
-let conceallevel=2
+let g:vim_markdown_folding_level = 3
+set conceallevel=2
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => YouCompleteMe
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:ycm_global_ycm_extra_conf = "/home/lal/.vim_runtime/my_plugins/YouCompleteMe/.ycm_extra_conf.py"
+let g:ycm_enable_diagnostic_signs = 1

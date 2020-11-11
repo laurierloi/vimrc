@@ -8,12 +8,16 @@ set cursorline
 set cursorcolumn
 
 " vsplit
-nmap <silent> <leader>sv :vsplit<cr>
-nmap <silent> <leader>sh :split<cr>
+" USE ':vs' and ':sp'
+"nmap <silent> <leader>sv :vsplit<cr>
+"nmap <silent> <leader>sh :split<cr>
 
 " Tab behavior for different file formats
 autocmd FileType robot    setlocal shiftwidth=4 softtabstop=4 noexpandtab
+autocmd FileType c,cpp    setlocal shiftwidth=4 softtabstop=4 noexpandtab
 autocmd FileType python   setlocal shiftwidth=4 softtabstop=4 expandtab
 autocmd FileType html     setlocal shiftwidth=2 softtabstop=2 expandtab
-autocmd FileType markdown setlocal shiftwidth=2 softtabstop=2 expandtab
+autocmd FileType markdown setlocal shiftwidth=2 softtabstop=2 noexpandtab
 
+" quickfix window full width
+:autocmd FileType qf wincmd J
