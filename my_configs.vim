@@ -21,3 +21,7 @@ autocmd FileType markdown setlocal shiftwidth=2 softtabstop=2 noexpandtab
 
 " quickfix window full width
 :autocmd FileType qf wincmd J
+
+" Support listchars 
+set listchars=eol:¬,trail:·,tab:▸·
+nmap <leader>lc :set invlist<cr>
