@@ -6,6 +6,8 @@ set rnu
 " Add cursor line and column
 set cursorline
 set cursorcolumn
+set colorcolumn=80,120
+highlight ColorColumn ctermbg=0 guibg=lightgrey
 
 " vsplit
 " USE ':vs' and ':sp'
@@ -22,6 +24,10 @@ autocmd FileType markdown setlocal shiftwidth=2 softtabstop=2 noexpandtab
 " quickfix window full width
 :autocmd FileType qf wincmd J
 
-" Support listchars 
+" Support listchars
 set listchars=eol:¬,trail:·,tab:▸·
 nmap <leader>lc :set invlist<cr>
+
+" Highlight trailing whitespaces and spaces before tabs
+:highlight ExtraWhitespace ctermbg=red guibg=red
+:autocmd BufWinEnter * match ExtraWhitespace /\s\+$\| \+\ze\t/
