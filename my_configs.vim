@@ -15,8 +15,8 @@ highlight ColorColumn ctermbg=0 guibg=lightgrey
 "nmap <silent> <leader>sh :split<cr>
 
 " Tab behavior for different file formats
-autocmd FileType robot    setlocal shiftwidth=4 softtabstop=4 noexpandtab
-autocmd FileType c,cpp    setlocal shiftwidth=4 softtabstop=4 noexpandtab
+autocmd FileType robot    setlocal shiftwidth=8 softtabstop=8 tabstop=8 noexpandtab
+autocmd FileType c,cpp    setlocal shiftwidth=8 softtabstop=8 tabstop=8 noexpandtab
 autocmd FileType python   setlocal shiftwidth=4 softtabstop=4 expandtab
 autocmd FileType html     setlocal shiftwidth=2 softtabstop=2 expandtab
 autocmd FileType markdown setlocal shiftwidth=2 softtabstop=2 noexpandtab
