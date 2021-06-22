@@ -41,21 +41,15 @@ let g:yankstack_yank_keys = ['y', 'd']
 nmap <C-m> <Plug>yankstack_substitute_older_paste
 nmap <C-n> <Plug>yankstack_substitute_newer_paste
 
+""""""""""""""""""""""""""""""
+" => Fly Mode
+""""""""""""""""""""""""""""""
+let g:AutoPairsFlyMode = 1
 
 """"""""""""""""""""""""""""""
 " => CTRL-P
 """"""""""""""""""""""""""""""
 let g:ctrlp_working_path_mode = 0
-
-" Quickly find and open a file in the current working directory
-let g:ctrlp_map = '<C-p>'
-map <leader>j :CtrlP<cr>
-
-" Quickly find and open a buffer
-map <leader>b :CtrlPBuffer<cr>
-
-" Quickly find and open a recently opened file
-map <leader>f :CtrlPMRU<CR>
 
 let g:ctrlp_max_height = 20
 let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee'
@@ -173,7 +167,8 @@ nnoremap <silent> <leader>z :Goyo<cr>
 let g:ale_linters = {
 \   'javascript': ['jshint'],
 \   'python': ['pylint'],
-\   'go': ['go', 'golint', 'errcheck']
+\   'go': ['go', 'golint', 'errcheck'],
+\   'robot': ['robocop']
 \}
 
 nmap <silent> <leader>a <Plug>(ale_next_wrap)
