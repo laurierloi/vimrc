@@ -20,6 +20,7 @@ autocmd FileType c,cpp    setlocal shiftwidth=8 softtabstop=8 tabstop=8 noexpand
 autocmd FileType python   setlocal shiftwidth=4 softtabstop=4 expandtab
 autocmd FileType html     setlocal shiftwidth=2 softtabstop=2 expandtab
 autocmd FileType markdown setlocal shiftwidth=2 softtabstop=2 noexpandtab
+autocmd FileType yaml     setlocal shiftwidth=2 softtabstop=2 expandtab
 
 " quickfix window full width
 :autocmd FileType qf wincmd J
