@@ -28,3 +28,6 @@
 [submodule "my_plugins/vim-tmux-navigator.git"]
 	path = my_plugins/vim-tmux-navigator.git
 	url = git@github.com:christoomey/vim-tmux-navigator.git
+[submodule "my_plugins/vim-matchup"]
+	path = my_plugins/vim-matchup
+	url = https://github.com/andymass/vim-matchup.git
