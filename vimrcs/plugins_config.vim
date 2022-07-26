@@ -44,7 +44,7 @@ nmap <C-n> <Plug>yankstack_substitute_newer_paste
 """"""""""""""""""""""""""""""
 " => Fly Mode
 """"""""""""""""""""""""""""""
-let g:AutoPairsFlyMode = 1
+let g:AutoPairsFlyMode = 0
 
 """"""""""""""""""""""""""""""
 " => CTRL-P
