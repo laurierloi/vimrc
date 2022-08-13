@@ -31,3 +31,9 @@
 [submodule "my_plugins/vim-matchup"]
 	path = my_plugins/vim-matchup
 	url = https://github.com/andymass/vim-matchup.git
+[submodule "my_plugins/vim-prettier"]
+	path = my_plugins/vim-prettier
+	url = https://github.com/prettier/vim-prettier
+[submodule "my_plugins/vim-javascript"]
+	path = my_plugins/vim-javascript
+	url = https://github.com/pangloss/vim-javascript
