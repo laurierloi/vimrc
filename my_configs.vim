@@ -37,3 +37,4 @@ nmap <leader>lc :set invlist<cr>
 
 " Paragraph width using 'par' command
 set formatprg=par\ -w80
+
