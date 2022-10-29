@@ -1,3 +1,6 @@
+" Leader
+:let mapleader = ","
+
 " turn relative line numbers on
 set relativenumber
 set number
@@ -22,7 +25,7 @@ autocmd FileType html           setlocal shiftwidth=2 softtabstop=2 expandtab
 autocmd FileType javascript     setlocal shiftwidth=2 softtabstop=2 expandtab
 autocmd FileType css            setlocal shiftwidth=2 softtabstop=2 expandtab
 autocmd FileType yaml           setlocal shiftwidth=2 softtabstop=2 expandtab
-autocmd FileType markdown       setlocal shiftwidth=2 softtabstop=2 noexpandtab
+autocmd FileType markdown       setlocal shiftwidth=2 softtabstop=2 noexpandtab tw=80
 
 " quickfix window full width
 :autocmd FileType qf wincmd J
@@ -38,3 +41,14 @@ nmap <leader>lc :set invlist<cr>
 " Paragraph width using 'par' command
 set formatprg=par\ -w80
 
+" Languages spell
+nmap <leader>sf :setlocal spell spelllang=fr
+nmap <leader>se :setlocal spell spelllang=en_us
+
+" languages spell tips:
+" 
+"   z= sur un mot souligné affiche une liste de corrections possibles
+"   zg rajoute un mot dans le dictionnaire
+"   zug pour annuler l’ajout au dictionnaire
+"   ]s pour aller au prochain mot mal orthographié
+"   [s pour le précédent
