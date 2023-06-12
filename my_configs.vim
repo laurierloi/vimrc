@@ -46,7 +46,7 @@ nmap <leader>sf :setlocal spell spelllang=fr
 nmap <leader>se :setlocal spell spelllang=en_us
 
 " languages spell tips:
-" 
+"
 "   z= sur un mot souligné affiche une liste de corrections possibles
 "   zg rajoute un mot dans le dictionnaire
 "   zug pour annuler l’ajout au dictionnaire
