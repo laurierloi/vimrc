@@ -1,3 +1,6 @@
-pip3 install --user --upgrade pynvim
-pip3 install --user jedi --upgrade
-pip3 install python-lsp-server
+#pip3 install pynvim
+#pip3 install jedi --upgrade
+pip3 install install python-lsp-server  # Should install jedi
+
+sudo apt install ack-grep
+sudo apt install silversearcher-ag

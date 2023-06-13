@@ -34,9 +34,6 @@
 [submodule "my_plugins/vim-hug-neovim-rpc"]
 	path = my_plugins/vim-hug-neovim-rpc
 	url = https://github.com/roxma/vim-hug-neovim-rpc
-[submodule "my_plugins/deoplete"]
-	path = my_plugins/deoplete
-	url = https://github.com/Shougo/deoplete.nvim
 [submodule "my_plugins/vim-fugitive"]
 	path = my_plugins/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive
@@ -49,9 +46,6 @@
 [submodule "my_plugins/ale"]
 	path = my_plugins/ale
 	url = https://github.com/dense-analysis/ale
-[submodule "my_plugins/deoplete-jedi"]
-	path = my_plugins/deoplete-jedi
-	url = https://github.com/deoplete-plugins/deoplete-jedi
 [submodule "my_plugins/vim-lsp"]
 	path = my_plugins/vim-lsp
 	url = https://github.com/prabirshrestha/vim-lsp

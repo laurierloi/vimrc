@@ -187,7 +187,7 @@ let g:ale_lint_on_enter = 1
 let g:ale_lint_on_insert_leave = 1
 let g:ale_fix_on_save = 1
 
-let g:ale_completion_enabled = 0
+let g:ale_completion_enabled = 1
 
 let g:ale_python_auto_virtualenv = 1
 
@@ -195,11 +195,14 @@ let g:ale_python_auto_virtualenv = 1
 " => Deoplete (autocompletion)
 "    TODO: check if we can switch to https://github.com/Shougo/ddc.vim
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:deoplete#enable_at_startup = 1
-let g:neocomplete#enable_smart_case = 1
-call deoplete#custom#option('sources', {
-\ '_': ['ale'],
-\})
+" NOTE: we disabled deoplete because it was causing issues with
+"       the python virtualenv... for now we simply use ale
+"
+""let g:deoplete#enable_at_startup = 1
+"let g:neocomplete#enable_smart_case = 1
+"call deoplete#custom#option('sources', {
+"\ '_': ['ale'],
+"\})
 
 "call deoplete#custom#option({
 "\ 'auto_complete_delay': 0.1,
