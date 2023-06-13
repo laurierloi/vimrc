@@ -113,18 +113,19 @@ autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 "    requires ack.vim - it's much better than vimgrep/grep
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Use the the_silver_searcher if possible (much faster than Ack)
-"if executable('ag')
-"  let g:ackprg = 'ag --vimgrep --smart-case'
-"endif
-"
-"" When you press gv you Ack after the selected text
-"vnoremap <silent> gv :call VisualSelection('gv', '')<CR>
-"
-"" Open Ack and put the cursor in the right position
-"map <leader>g :Ack
-"
-"" When you press <leader>r you can search and replace the selected text
-"vnoremap <silent> <leader>r :call VisualSelection('replace', '')<CR>
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep --smart-case'
+endif
+
+cnoreabbrev Ack Ack!
+" When you press gv you Ack after the selected text
+vnoremap <silent> gv :call VisualSelection('gv', '')<CR>
+
+" Open Ack and put the cursor in the right position
+map <leader>g :Ack<Space>
+
+" When you press <leader>r you can search and replace the selected text
+vnoremap <silent> <leader>r :call VisualSelection('replace', '')<CR>
 
 " Do :help cope if you are unsure what cope is. It's super useful!
 "

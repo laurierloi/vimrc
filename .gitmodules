@@ -61,3 +61,6 @@
 [submodule "my_plugins/vim-colors-solarized"]
 	path = my_plugins/vim-colors-solarized
 	url = https://github.com/altercation/vim-colors-solarized
+[submodule "my_plugins/ack"]
+	path = my_plugins/ack
+	url = https://github.com/mileszs/ack.vim.git
