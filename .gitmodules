@@ -1,9 +1,6 @@
-[submodule "my_plugins/YouCompleteMe"]
-	path = my_plugins/YouCompleteMe
-	url = https://github.com/ycm-core/YouCompleteMe.git
 [submodule "my_plugins/lightline-bufferline"]
 	path = my_plugins/lightline-bufferline
-	url = https://github.com/mengelbrecht/lightline-bufferline.git 
+	url = https://github.com/mengelbrecht/lightline-bufferline.git
 [submodule "my_plugins/robotframework-vim"]
 	path = my_plugins/robotframework-vim
 	url = https://github.com/mfukar/robotframework-vim.git
@@ -31,12 +28,33 @@
 [submodule "my_plugins/vim-matchup"]
 	path = my_plugins/vim-matchup
 	url = https://github.com/andymass/vim-matchup.git
-[submodule "my_plugins/vim-prettier"]
-	path = my_plugins/vim-prettier
-	url = https://github.com/prettier/vim-prettier
-[submodule "my_plugins/vim-javascript"]
-	path = my_plugins/vim-javascript
-	url = https://github.com/pangloss/vim-javascript
+[submodule "my_plugins/nvim-yarp"]
+	path = my_plugins/nvim-yarp
+	url = https://github.com/roxma/nvim-yarp
+[submodule "my_plugins/vim-hug-neovim-rpc"]
+	path = my_plugins/vim-hug-neovim-rpc
+	url = https://github.com/roxma/vim-hug-neovim-rpc
 [submodule "my_plugins/vim-fugitive"]
 	path = my_plugins/vim-fugitive
-	url = git@github.com:tpope/vim-fugitive.git
+	url = https://github.com/tpope/vim-fugitive
+[submodule "my_plugins/tlib"]
+	path = my_plugins/tlib
+	url = https://github.com/tomtom/tlib_vim
+[submodule "my_plugins/copilot.vim"]
+	path = my_plugins/copilot.vim
+	url = https://github.com/github/copilot.vim.git
+[submodule "my_plugins/ale"]
+	path = my_plugins/ale
+	url = https://github.com/dense-analysis/ale
+[submodule "my_plugins/vim-lsp"]
+	path = my_plugins/vim-lsp
+	url = https://github.com/prabirshrestha/vim-lsp
+[submodule "my_plugins/nerdcommenter"]
+	path = my_plugins/nerdcommenter
+	url = https://github.com/preservim/nerdcommenter.git
+[submodule "my_plugins/vim-colors-solarized"]
+	path = my_plugins/vim-colors-solarized
+	url = https://github.com/altercation/vim-colors-solarized
+[submodule "my_plugins/ack"]
+	path = my_plugins/ack
+	url = https://github.com/mileszs/ack.vim.git

@@ -107,7 +107,7 @@ let g:multi_cursor_quit_key            = '<Esc>'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => surround.vim config
-" Annotate strings with gettext 
+" Annotate strings with gettext
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 vmap Si S(i_<esc>f)
 au FileType mako vmap Si S"i${ _(<esc>2f"a) }<esc>
@@ -166,9 +166,14 @@ nnoremap <silent> <leader>z :Goyo<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:ale_linters = {
 \   'javascript': ['jshint'],
-\   'python': ['pylint'],
+\   'python': ['pylsp'],
 \   'go': ['go', 'golint', 'errcheck'],
 \   'robot': ['robocop']
+\}
+
+let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'python': ['isort', 'autopep8'],
 \}
 
 nmap <silent> <leader>a <Plug>(ale_next_wrap)
@@ -177,9 +182,36 @@ nmap <silent> <leader>a <Plug>(ale_next_wrap)
 let g:ale_set_highlights = 1
 
 " Only run linting when saving the file
-let g:ale_lint_on_text_changed = 'never'
+"let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_enter = 1
 let g:ale_lint_on_insert_leave = 1
+let g:ale_fix_on_save = 1
+
+let g:ale_completion_enabled = 1
+
+let g:ale_python_auto_virtualenv = 1
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Deoplete (autocompletion)
+"    TODO: check if we can switch to https://github.com/Shougo/ddc.vim
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" NOTE: we disabled deoplete because it was causing issues with
+"       the python virtualenv... for now we simply use ale
+"
+""let g:deoplete#enable_at_startup = 1
+"let g:neocomplete#enable_smart_case = 1
+"call deoplete#custom#option('sources', {
+"\ '_': ['ale'],
+"\})
+
+"call deoplete#custom#option({
+"\ 'auto_complete_delay': 0.1,
+"\ 'auto_complete_start_length': 1,
+"\ 'enable_at_startup': 1,
+"\ 'enable_smart_case': 1,
+"\ 'force_omni_input_patterns': {},
+"\ })
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Git gutter (Git diff)
