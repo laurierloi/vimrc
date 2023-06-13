@@ -55,3 +55,9 @@
 [submodule "my_plugins/vim-lsp"]
 	path = my_plugins/vim-lsp
 	url = https://github.com/prabirshrestha/vim-lsp
+[submodule "my_plugins/nerdcommenter"]
+	path = my_plugins/nerdcommenter
+	url = https://github.com/preservim/nerdcommenter.git
+[submodule "my_plugins/vim-colors-solarized"]
+	path = my_plugins/vim-colors-solarized
+	url = https://github.com/altercation/vim-colors-solarized
