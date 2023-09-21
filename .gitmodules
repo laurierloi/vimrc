@@ -58,3 +58,6 @@
 [submodule "my_plugins/ack"]
 	path = my_plugins/ack
 	url = https://github.com/mileszs/ack.vim.git
+[submodule "my_plugins/rust.vim"]
+	path = my_plugins/rust.vim
+	url = git@github.com:rust-lang/rust.vim.git

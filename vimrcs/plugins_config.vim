@@ -163,18 +163,24 @@ nnoremap <silent> <leader>z :Goyo<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Ale (syntax checker and linter)
+"
+"
+" For rust, see: https://rust-analyzer.github.io/manual.html#rust-analyzer-language-server-binary
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:ale_linters = {
 \   'javascript': ['jshint'],
 \   'python': ['pylsp'],
 \   'go': ['go', 'golint', 'errcheck'],
-\   'robot': ['robocop']
+\   'robot': ['robocop'],
+\   'rust': ['analyzer'],
 \}
 
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
-\   'python': ['isort', 'autopep8'],
+\   'rust': ['rustfmt'],
 \}
+" extra fixers
+"\   'python': ['isort', 'autopep8'],
 
 nmap <silent> <leader>a <Plug>(ale_next_wrap)
 
@@ -182,14 +188,27 @@ nmap <silent> <leader>a <Plug>(ale_next_wrap)
 let g:ale_set_highlights = 1
 
 " Only run linting when saving the file
-"let g:ale_lint_on_text_changed = 'never'
-let g:ale_lint_on_enter = 1
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_lint_on_enter = 0
 let g:ale_lint_on_insert_leave = 1
 let g:ale_fix_on_save = 1
 
 let g:ale_completion_enabled = 1
 
 let g:ale_python_auto_virtualenv = 1
+
+" Show errors in the preview window, but exit on inert
+let g:ale_cursor_detail = 1
+let g:ale_close_preview_on_insert = 1
+
+let g:ale_rust_analyzer_executable='/home/lal/.local/bin/rust-analyzer'
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Copilot
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+imap <silent><script><expr> <C-i> copilot#Accept("\<CR>")
+let g:copilot_no_tab_map = v:true
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Deoplete (autocompletion)
