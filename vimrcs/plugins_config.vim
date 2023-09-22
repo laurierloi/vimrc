@@ -219,6 +219,10 @@ nmap <silent> <leader>ls :ALESymbolSearch<cr>
 imap <silent><script><expr> <C-i> copilot#Accept("\<CR>")
 let g:copilot_no_tab_map = v:true
 
+let g:copilot_filetypes = {
+\ 'rust': v:false,
+\ }
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Deoplete (autocompletion)
