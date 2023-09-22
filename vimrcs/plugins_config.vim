@@ -182,8 +182,6 @@ let g:ale_fixers = {
 " extra fixers
 "\   'python': ['isort', 'autopep8'],
 
-nmap <silent> <leader>a <Plug>(ale_next_wrap)
-
 " Disabling highlighting
 let g:ale_set_highlights = 1
 
@@ -203,7 +201,19 @@ let g:ale_close_preview_on_insert = 1
 
 let g:ale_rust_analyzer_executable='/home/lal/.local/bin/rust-analyzer'
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" define shortkeys
+nmap <silent> <leader>lr :ALEFindReferences<cr>
+nmap <silent> <leader>lg :ALEGoToDefinition<cr>
+nmap <silent> <leader>li :ALEGoToImplementation<cr>
+nmap <silent> <leader>ld :ALEDetail<cr>
+nmap <silent> <leader>ln :ALENextWrap<cr>
+nmap <silent> <leader>lp :ALEPreviousWrap<cr>
+nmap <silent> <leader>lk :ALENext<cr>
+nmap <silent> <leader>lj :ALEPrevious<cr>
+nmap <silent> <leader>ls :ALESymbolSearch<cr>
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Copilot
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 imap <silent><script><expr> <C-i> copilot#Accept("\<CR>")
