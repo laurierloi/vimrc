@@ -61,3 +61,6 @@
 [submodule "my_plugins/rust.vim"]
 	path = my_plugins/rust.vim
 	url = git@github.com:rust-lang/rust.vim.git
+[submodule "my_plugins/vim-gnupg"]
+	path = my_plugins/vim-gnupg
+	url = git@github.com:jamessan/vim-gnupg.git
