@@ -164,7 +164,7 @@ nnoremap <silent> <leader>z :Goyo<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Ale (syntax checker and linter)
 "
-"
+" For python: pip install python-lsp-server
 " For rust, see: https://rust-analyzer.github.io/manual.html#rust-analyzer-language-server-binary
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:ale_linters = {
@@ -173,11 +173,13 @@ let g:ale_linters = {
 \   'go': ['go', 'golint', 'errcheck'],
 \   'robot': ['robocop'],
 \   'rust': ['analyzer'],
+\   'c': [],
 \}
 
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'rust': ['rustfmt'],
+\   'python': ['autopep8'],
 \}
 " extra fixers
 "\   'python': ['isort', 'autopep8'],
