@@ -61,3 +61,6 @@
 [submodule "my_plugins/vim-gnupg"]
 	path = my_plugins/vim-gnupg
 	url = git@github.com:jamessan/vim-gnupg.git
+[submodule "my_plugins/tagbar"]
+	path = my_plugins/tagbar
+	url = https://github.com/preservim/tagbar

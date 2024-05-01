@@ -4,7 +4,6 @@
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-
 """"""""""""""""""""""""""""""
 " => Load pathogen paths
 """"""""""""""""""""""""""""""
@@ -297,3 +296,40 @@ let g:prettier#exec_cmd_async = 1
 let g:prettier#autoformat = 1
 let g:prettier#autoformat_require_pragma = 0
 let g:prettier#config#print_width = 80
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => tagbar
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nmap <leader>tt :TagbarToggle<cr>
+nmap <leader>ts :TagbarShowTag<cr>
+nmap <leader>tp :TagbarTogglePause<cr>
+let g:tagbar_autofocus = 1
+let g:tagbar_autoclose = 1
+let g:tagbar_width = 30
+let g:tagbar_show_linenumbers = 1
+let g:tagbar_show_numbers = 1
+let g:tagbar_show_fold_buttons = 1
+let g:tagbar_show_scopes = 1
+let g:tagbar_show_accessibility = 1
+let g:tagbar_show_visibility = 1
+let g:tagbar_show_inheritance = 1
+let g:tagbar_show_structs = 1
+let g:tagbar_show_enums = 1
+let g:tagbar_show_interfaces = 1
+let g:tagbar_show_constants = 1
+let g:tagbar_show_variables = 1
+let g:tagbar_show_methods = 1
+let g:tagbar_show_functions = 1
+let g:tagbar_show_constructors = 1
+let g:tagbar_show_operators = 1
+let g:tagbar_show_type = 1
+let g:tagbar_show_fields = 1
+let g:tagbar_show_macros = 1
+let g:tagbar_show_preprocessor = 1
+let g:tagbar_show_attributes = 1
+let g:tagbar_show_events = 1
+let g:tagbar_show_imports = 1
+let g:tagbar_show_exports = 1
+let g:tagbar_show_classes = 1
+let g:tagbar_show_namespaces = 1
+let g:tagbar_show_modules = 1
