@@ -67,3 +67,6 @@
 [submodule "my_plugins/vim-javascript"]
 	path = my_plugins/vim-javascript
 	url = https://github.com/pangloss/vim-javascript
+[submodule "my_plugins/auto-pairs"]
+	path = my_plugins/auto-pairs
+	url = https://github.com/jiangmiao/auto-pairs
