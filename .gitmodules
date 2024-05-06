@@ -73,3 +73,6 @@
 [submodule "vim-prettier"]
 	path = my_plugins/vim-prettier
 	url = https://github.com/prettier/vim-prettier
+[submodule "my_plugins/vim-tmux-focus-events"]
+	path = my_plugins/vim-tmux-focus-events
+	url = https://github.com/tmux-plugins/vim-tmux-focus-events.git
