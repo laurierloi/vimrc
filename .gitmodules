@@ -76,3 +76,18 @@
 [submodule "my_plugins/vim-tmux-focus-events"]
 	path = my_plugins/vim-tmux-focus-events
 	url = https://github.com/tmux-plugins/vim-tmux-focus-events.git
+[submodule "my_plugins/vim-lsp-settings"]
+	path = my_plugins/vim-lsp-settings
+	url = https://github.com/mattn/vim-lsp-settings.git
+[submodule "my_plugins/asyncomplete.vim"]
+	path = my_plugins/asyncomplete.vim
+	url = https://github.com/prabirshrestha/asyncomplete.vim.git
+[submodule "my_plugins/asyncomplete-lsp.vim"]
+	path = my_plugins/asyncomplete-lsp.vim
+	url = https://github.com/prabirshrestha/asyncomplete-lsp.vim.git
+[submodule "my_plugins/vim-vue-plugin"]
+	path = my_plugins/vim-vue-plugin
+	url = https://github.com/leafOfTree/vim-vue-plugin.git
+[submodule "my_plugins/vim-lsp-ale"]
+	path = my_plugins/vim-lsp-ale
+	url = https://github.com/rhysd/vim-lsp-ale.git

@@ -167,18 +167,26 @@ nnoremap <silent> <leader>z :Goyo<cr>
 " For rust, see: https://rust-analyzer.github.io/manual.html#rust-analyzer-language-server-binary
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:ale_linters = {
-\   'javascript': ['jshint'],
 \   'python': ['pylsp'],
 \   'go': ['go', 'golint', 'errcheck'],
 \   'robot': ['robocop'],
 \   'rust': ['analyzer'],
 \   'c': [],
+\   'vue':        ['vim-lsp'],
+\   'typescript': ['vim-lsp'],
+\   'javascript': ['vim-lsp'],
+\   'json':       ['vim-lsp'],
+\   'html':       ['vim-lsp'],
+\   'css':        ['vim-lsp'],
 \}
 
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'rust': ['rustfmt'],
 \   'python': ['autopep8'],
+\   'javascript': ['eslint', 'prettier'],
+\   'typescript': ['eslint', 'prettier'],
+\   'vue':        ['eslint', 'prettier'],
 \}
 " extra fixers
 "\   'python': ['isort', 'autopep8'],
@@ -212,9 +220,13 @@ nmap <silent> <leader>lp :ALEPreviousWrap<cr>
 nmap <silent> <leader>lk :ALENext<cr>
 nmap <silent> <leader>lj :ALEPrevious<cr>
 nmap <silent> <leader>ls :ALESymbolSearch<cr>
+nmap <silent> <leader>lh :ALEHover<cr>
+nmap <silent> <leader>la :ALECodeAction<cr>
+nmap <silent> <leader>lf :ALEFix<cr>
+nmap <silent> <leader>re :ALERename<cr>
 
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Copilot
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 imap <silent><script><expr> <C-i> copilot#Accept("\<CR>")
@@ -275,18 +287,18 @@ let g:ycm_enable_diagnostic_signs = 1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => vim-javascript
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"let g:javascript_conceal_function             = "ƒ"
-"let g:javascript_conceal_null                 = "ø"
-"let g:javascript_conceal_this                 = "@"
-"let g:javascript_conceal_return               = "⇚"
-"let g:javascript_conceal_undefined            = "¿"
-"let g:javascript_conceal_NaN                  = "ℕ"
-"let g:javascript_conceal_prototype            = "¶"
-"let g:javascript_conceal_static               = "•"
-"let g:javascript_conceal_super                = "Ω"
-"let g:javascript_conceal_arrow_function       = "⇒"
-"let g:javascript_conceal_noarg_arrow_function = "🞅"
-"let g:javascript_conceal_underscore_arrow_function = "🞅"
+let g:javascript_conceal_function             = "ƒ"
+let g:javascript_conceal_null                 = "ø"
+let g:javascript_conceal_this                 = "@"
+let g:javascript_conceal_return               = "⇚"
+let g:javascript_conceal_undefined            = "¿"
+let g:javascript_conceal_NaN                  = "ℕ"
+let g:javascript_conceal_prototype            = "¶"
+let g:javascript_conceal_static               = "•"
+let g:javascript_conceal_super                = "Ω"
+let g:javascript_conceal_arrow_function       = "⇒"
+let g:javascript_conceal_noarg_arrow_function = "🞅"
+let g:javascript_conceal_underscore_arrow_function = "🞅"
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -333,3 +345,43 @@ let g:tagbar_show_exports = 1
 let g:tagbar_show_classes = 1
 let g:tagbar_show_namespaces = 1
 let g:tagbar_show_modules = 1
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => asyncomplete
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:asyncomplete_auto_popup = 1
+"inoremap <expr> <CR> pumvisible() ? asyncomplete#close_popup() . "\<CR>" : "\<CR>"
+"inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+"inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => LSP server
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" --- LSP servers registration ---
+augroup LspSetup
+  autocmd!
+  " Vue / Volar v2
+  autocmd User lsp_setup call lsp#register_server({
+        \ 'name': 'vue-language-server',
+        \ 'cmd': {server_info->['vue-language-server', '--stdio']},
+        \ 'allowlist': ['vue', 'typescript', 'javascript', 'typescriptreact', 'javascriptreact', 'json', 'html', 'css']
+        \ })
+
+  " TypeScript (for .ts / .tsx outside SFC templates)
+  autocmd User lsp_setup call lsp#register_server({
+        \ 'name': 'tsserver',
+        \ 'cmd': {server_info->['typescript-language-server', '--stdio']},
+        \ 'allowlist': ['typescript', 'typescriptreact', 'javascript', 'javascriptreact']
+        \ })
+augroup END
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => vim_vue
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:vim_vue_plugin_use_scss = 1
+let g:vim_vue_plugin_use_typescript = 1
+filetype plugin indent on
+syntax on
